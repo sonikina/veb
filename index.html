@@ -4,8 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STUDINFO - Вступ 2026</title>
+    
+    <!-- Фавіконка -->
     <link rel="icon" type="image/png" href="img/favicon.png">
+    
+    <!-- Шрифти Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Бібліотека jQuery (для кнопки Вгору) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Стилі -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -14,9 +23,10 @@
     <header class="header">
         <div class="container header-container">
             <a href="#" class="logo" onclick="navigateTo('home')">
-    <img src="img/logo.png" alt="Logo">
-    <span>STUDINFO</span>
-</a>
+                <!-- Якщо є логотип-картинка -->
+                <!-- <img src="img/logo.svg" alt="Logo"> -->
+                <span>STUDINFO</span>
+            </a>
             <nav class="nav">
                 <ul class="nav-list">
                     <li><a href="#" class="nav-link active" data-target="home">Головна</a></li>
@@ -45,7 +55,7 @@
                 <h2 class="section-title">Як це працює?</h2>
                 
                 <div class="step-row fade-in-element">
-                    <div class="step-image"><img src="img/step1.jpg" alt="Крок 1"></div>
+                    <div class="step-image"><img src="img/step1.png" alt="Крок 1"></div>
                     <div class="step-content">
                         <h3>1. Введи свої бали</h3>
                         <p>Вкажи результати НМТ або очікувані бали у нашому калькуляторі.</p>
@@ -54,7 +64,7 @@
                 </div>
 
                 <div class="step-row reverse fade-in-element">
-                    <div class="step-image"><img src="img/step2.jpg" alt="Крок 2"></div>
+                    <div class="step-image"><img src="img/step2.png" alt="Крок 2"></div>
                     <div class="step-content">
                         <h3>2. Отримай аналіз</h3>
                         <p>Система автоматично розрахує конкурсний бал та підбере варіанти.</p>
@@ -63,7 +73,7 @@
                 </div>
 
                 <div class="step-row fade-in-element">
-                    <div class="step-image"><img src="img/step3.jpg" alt="Крок 3"></div>
+                    <div class="step-image"><img src="img/step3.png" alt="Крок 3"></div>
                     <div class="step-content">
                         <h3>3. Готуйся до вступу</h3>
                         <p>Використовуй наші матеріали та обирай університет мрії.</p>
@@ -78,7 +88,7 @@
                 <div class="accordion">
                     <div class="accordion-item">
                         <button class="accordion-header">Як працює алгоритм?</button>
-                        <div class="accordion-content"><p>Ми використовуємо офіційну формулу розрахунку балу від МОН.</p></div>
+                        <div class="accordion-content"><p>Ми використовуємо офіційні формули МОН.</p></div>
                     </div>
                     <div class="accordion-item">
                         <button class="accordion-header">Це безкоштовно?</button>
@@ -91,7 +101,7 @@
             <div class="timer-section section-padding bg-light">
                 <div class="container center-text">
                     <h2 class="section-title" style="margin-bottom: 10px;">До НМТ 2026 залишилось:</h2>
-                    <p class="quote">"Все у ваших руках, не бійтеся - дійте!"</p>
+                    <p class="quote">"Освіта — це найпотужніша зброя, яку можна використати, щоб змінити світ."</p>
                     
                     <div id="countdown" class="countdown-grid">
                         <div class="time-box"><span id="days">00</span><small>Днів</small></div>
@@ -213,17 +223,16 @@
                 <h2 class="section-title center-text">ТОП-10 Університетів України</h2>
                 
                 <div class="uni-layout">
-                    <!-- Фільтри -->
+                    <!-- Фільтри (Стиль зі скріншоту) -->
                     <aside class="sidebar">
                         <div class="screenshot-filter-card">
                             <div class="filter-header">
                                 <h3>Фільтри</h3>
                                 <span id="reset-filters" class="reset-link">Скинути</span>
                             </div>
-                             <div class="filter-group">
-                                <label> Пошук</label>
-                                <input type="text" id="search-input" placeholder="Назва..." class="modern-input-sm">
-                            </div>
+                            
+                            <!-- Ціна прибрана, як ти просила -->
+
                             <div class="filter-group">
                                 <label>📍 Місто</label>
                                 <select id="city-select" class="modern-select-sm">
@@ -234,6 +243,10 @@
                                     <option value="Одеса">Одеса</option>
                                     <option value="Суми">Суми</option>
                                 </select>
+                            </div>
+                             <div class="filter-group">
+                                <label>🔍 Пошук</label>
+                                <input type="text" id="search-input" placeholder="Назва..." class="modern-input-sm">
                             </div>
 
                             <div class="filter-group">
@@ -292,7 +305,7 @@
                     <div id="detail-list" class="resources-list"></div>
                 </div>
 
-                <!-- SEO Текст -->
+                <!-- SEO Текст (Стильний Read More) -->
                 <div class="seo-section">
                     <h3 style="margin-top:50px;">Корисні поради</h3>
                     <div id="seo-text" class="seo-content collapsed">
@@ -311,12 +324,13 @@
         </section>
 
 
-        <!-- 5. ПРО НАС -->
+        <!-- 5. ПРО НАС (З картою) -->
         <section id="about" class="section-view">
             <div class="container section-padding">
                 <h2 class="section-title center-text">Про нас</h2>
                 <div class="about-grid">
                     <div class="about-img">
+                        <!-- Мем -->
                         <img src="img/about-meme.jpg" alt="Team Meme">
                     </div>
                     <div class="about-info">
@@ -324,27 +338,38 @@
                         <p>Ми - команда ентузіастів, які пристрасно вірять у силу освіти. Наша мета - зробити процес вступу доступним.</p>
                         <h3>Чому ми створили STUDINFO</h3>
                         <p>У сучасному світі доступ до інформації має бути швидким. Ми об'єднали все необхідне в одному місці.</p>
-                        <h3>Наша місія.</h3>
-                        <p>Наша місія полягає в тому, щоб зробити процес вступу до університету прозорим, зрозумілим та допомогти кожному абітурієнту знайти ідеальний виш, який відповідає його потребам і амбіціям. Ми прагнемо забезпечити доступність вищої освіти для кожної людини, незалежно від її соціального статусу чи фінансових можливостей. Наша місія - підтримати та надихнути молоде покоління на досягнення своїх освітніх та кар'єрних мрій</p>
+                    </div>
+                </div>
+
+                <!-- КАРТА (Інтерактивний елемент) -->
+                <div class="map-section fade-in-element">
+                    <h3 class="center-text" style="margin-top: 60px; margin-bottom: 20px;">Як нас знайти</h3>
+                    <div class="map-container">
+                        <!-- Карта Львівської Політехніки -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.076540121447!2d24.01328631570947!3d49.838276979395565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add790d9a6c77%3A0x8698027732292023!2z0J3QsNGG0ZbQvtC90LDQu9GM0L3QuNC5INGD0L3RltCy0LXRgNGB0LjRgtC10YIgItCb0YzQstGW0LLRgdGM0LrQsCDQv9C-0LvRltGC0LXRhdC90ZbQutCwIg!5e0!3m2!1suk!2sua!4v1700000000000!5m2!1suk!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- FOOTER -->
+    <!-- FOOTER (БЕЗ ДОНАТІВ, ТІЛЬКИ СОЦМЕРЕЖІ) -->
     <footer class="footer-modern">
         <div class="container footer-content">
             <div class="social-links">
-                <a href="https://t.me/sonikina"><img src="img/social-tg.jpg" alt="Telegram" class="social-img"></a>
-                <a href="https://www.instagram.com/ssonikina/"><img src="img/social-inst.jpg" alt="Instagram" class="social-img"></a>
-                <a href="www.linkedin.com/in/sofia-mashtaler-ba7b7a243"><img src="img/social-in.png" alt="LinkedIn" class="social-img"></a>
+                <!-- Встав сюди свої посилання -->
+                <a href="https://t.me/your_link" target="_blank"><img src="img/social-tg.png" alt="Telegram" class="social-img"></a>
+                <a href="https://instagram.com/your_link" target="_blank"><img src="img/social-inst.png" alt="Instagram" class="social-img"></a>
+                <a href="https://linkedin.com/in/your_link" target="_blank"><img src="img/social-in.png" alt="LinkedIn" class="social-img"></a>
             </div>
-            <p style="color:#6B7280; font-size:14px;">&copy; 2025 STUDINFO. Машталер Софія ПП-24</p>
+            <p style="color:#6B7280; font-size:14px;">&copy; 2025 STUDINFO.</p>
         </div>
     </footer>
 
-    <!-- MODAL QUIZ -->
+    <!-- КНОПКА ВГОРУ (jQuery) -->
+    <button id="scrollToTop" title="Вгору">↑</button>
+
+    <!-- MODAL QUIZ (5 Питань) -->
     <div id="quiz-modal" class="modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
@@ -368,5 +393,4 @@
 
     <script src="js/script.js"></script>
 </body>
-
 </html>
